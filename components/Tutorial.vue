@@ -10,12 +10,15 @@
         <h2 class="text-2xl leading-7 font-semibold">
           Welcome to your Nuxt Application
         </h2>
+        <p>{{ key }}{{ key1 }}</p>
+        <NuxtLink to="/about">Обо мне</NuxtLink>
         <p class="mt-3 text-gray-600">
           We recommend you take a look at the <a href="https://nuxtjs.org" target="_blank" class="button--doc text-green-500 hover:underline">Nuxt Documentation</a>, whether you are new or have previous experience with the framework.<br>
         </p>
         <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
           To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
         </p>
+
       </div>
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"><svg
@@ -46,7 +49,20 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  name: 'NuxtTutorial'
+  name: 'NuxtTutorial',
+  components: {
+
+  },
+  setup(props, { emit }){
+    const key = ref()
+    const key1 = ref('555')
+    key.value = process.env.SECRET_KEY
+    return {
+      key, key1
+    }
+  }
 }
 </script>
