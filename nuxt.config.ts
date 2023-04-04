@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     components: true,
     pages: true,
     modules: [
+        'nuxt-icon',
         '@vite-pwa/nuxt',
         [
             '@pinia/nuxt',
@@ -24,7 +25,8 @@ export default defineNuxtConfig({
                     ['defineStore', 'definePiniaStore'],
                 ]
             },
-        ]
+        ],
+        
     ],
     // https://vite-pwa-org.netlify.app
     pwa: {

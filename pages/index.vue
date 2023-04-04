@@ -1,27 +1,39 @@
 <template>
 
     <!-- ==================================== БАННЕР ЗАГОЛОВОК ==================================== -->
-    <header style="min-height: 100vh; background-color: var(--light); display: flex; justify-content: center;">
-        <h1>Юнидрам</h1>
-        <h2>Гармоничный круг с ярким голосом</h2>
-        <p>Глеба Рудакова</p>
+    <header style="min-height: 100vh; background-color: var(--light); display: flex; justify-content: center; align-items: center; position: relative;">
 
-        <!-- Кнопки -->
-        <NuxtLink 
-            :to="{
-                path: '/',
-                hash: '#about-the-tool' 
-        }">Об инструменте</NuxtLink>
-        <NuxtLink :to="{
-                path: '/',
-                hash: '#products'
-        }">Купить</NuxtLink>
+        <!-- Кнопка меню личного кабинета -->
+        <LkButton/>
+        
+        <div style="z-index: 999998; margin-right: 10rem;">
+            
+            <!-- Заголовок -->
+            <div style="display: flex; flex-direction: column; position: relative;">
+                <h1 style="font-family: 'TildaSansWebBlack';">Юнидрам</h1>
+                <p style="position: absolute; top: 10rem; right: 0;">Глеба Рудакова ©</p>
+                <h2 style="margin-left: 0.5rem; margin-top: 0.8rem; color: gray; font-size: 2rem;">Гармоничный круг с ярким голосом</h2>
+            </div>
+            
+            <!-- Кнопки -->
+            <div style="margin: 7rem 0 0 0.6rem;">
+                <NuxtLink :to="{ path: '/', hash: '#about-the-tool' }" style="margin-right: 2rem; color: var(--dark);background-color: rgba(255, 255, 255, 0.5); padding: 1rem 1.5rem; border-radius: 1.5rem;">Об инструменте</NuxtLink>
+                <NuxtLink :to="{ path: '/', hash: '#products' }" style="margin-right: 2rem; color: var(--dark)">Купить</NuxtLink>
+            </div>
+            
+        </div>
+
+
+        <!-- Картинка -->
+        <div style="position: absolute; right: 0; top: 0; height: 100vh; z-index: 999997">
+            <img src="/img/headerImg.jpg" alt="unidrum ханг идиофон" style="height: 100%;">
+        </div>
     </header>
 
 
     <main>
         <!-- ОБ ИНСТРУМЕНТЕ -->
-        <About id="about-the-tool"/>
+        <AboutSection id="about-the-tool"/>
 
         <!-- ТОВАРЫ -->
         <Products id="products"/>
@@ -29,9 +41,6 @@
 
     <!-- ПОДВАЛ -->
     <Footer/>
-
-    <!-- Кнопка меню личного кабинета -->
-    <NuxtLink to="/lk" style="position: fixed; top: 1rem; right: 2rem; width: 48px; height: 48px; background-color: gray; border-radius: 100%; z-index: 666666"></NuxtLink>
 
     <!-- Кнопка ВВЕРХ -->
     <div id="toTop" @click.prevent="scrollTo(0,100)">
@@ -48,7 +57,7 @@
 </template>
 
 <script setup>
-    import About from '@/components/About.vue'
+    import AboutSection from '~/components/AboutSection.vue'
     import Products from '@/components/Products.vue'
     import Footer from '@/components/Footer.vue'
 
@@ -63,9 +72,17 @@
     useHead({
         htmlAttrs: {
             lang: 'en',
-            charset: 'utf-8',
+            // charset: 'utf-8',
             // style: 'font-size: 13px'
-        }
+        },
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            // { rel: 'sitemap', type: 'application/xml', href: 'https://localhost/sitemap.xml' }
+        ],
     })
 
     const router = useRouter()

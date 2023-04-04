@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@vite-pwa/nuxt": "^0.0.7",
-    "nuxt": "^3.3.3"
+    "nuxt": "^3.3.3",
+    "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.7",
