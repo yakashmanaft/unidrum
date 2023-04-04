@@ -1,8 +1,19 @@
 /*  */
+:root {
+    --dark: #555e7f;
+    --more-dark: #3e445c;
+    --light: #eaeaf6;
+    /* --secondary-color: #EBFFFA; */
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'GolosTextWebRegular';
+    color: var(--dark);
 }
 
 h1 {
     font-size: 5rem;
+    font-weight: bold;
 }
