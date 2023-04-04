@@ -3,11 +3,11 @@
     <NuxtWelcome />
   </div> -->
   <NuxtLayout>
-    <NuxtLoadingIndicator/>
+    <!-- <NuxtLoadingIndicator/> -->
     <NuxtPage/>
 
     <!--  -->
-    <div id='nav'>
+    <!-- <div id='nav'>
       <nav>
         <NuxtLink to="/">
           Index
@@ -16,21 +16,21 @@
           About
         </NuxtLink>  
       </nav>
-    </div>
+    </div> -->
 
     <!--  -->
-    <div id='footer'>
+    <!-- <div id='footer'>
       Current Route: <code>{{ route.path }}</code> 
-    </div>
+    </div> -->
   </NuxtLayout>
 </template>
 
 <script setup>
-  const route = useRoute()
+  // const route = useRoute()
 </script>
 
-<style scoped>
-  #nav {
+<style>
+  /* #nav {
     background-color: red;
-  }
+  } */
 </style>
