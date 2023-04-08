@@ -3,8 +3,8 @@
         <div v-for="(product, index) in products" :key="index">
             {{ product }}
             <!-- <NuxtLink :to="{ name: '_product', params: product }">Подробнее</NuxtLink> -->
-            <NuxtLink :to="{ path: `/products/${product.uid}`, params: {product}}">Подробнее</NuxtLink>
-            <!-- <div @click="$router.push(`/products/${product.uid}`)">Подробнее</div> -->
+            <NuxtLink :to="{ path: `/products/${product.route}`}">Подробнее</NuxtLink>
+            <!-- <div @click="$router.push(`/products/${product.route}`)">Подробнее</div> -->
         </div>
     </div>
 </template>
