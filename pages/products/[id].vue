@@ -12,6 +12,30 @@
     const productsStore = useProductsStore()
 
     const product = productsStore.products.find((item) => item.route === route.params.id)
+
+    useServerSeoMeta({
+      title: 'Unidrum by Gleb Rudakov',
+      ogTitle: `${product.model}`,
+      description: 'Музыкальный инструмент unidrum',
+      ogDescription: 'Музыкальный инструмент unidrum, Создаю музыкальные инструменты',
+      ogImage: 'https://example.com/image.png',
+      twitterCard: 'summary_large_image',
+    })
+    useHead({
+        htmlAttrs: {
+            lang: 'en',
+            // charset: 'utf-8',
+            // style: 'font-size: 13px'
+        },
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            // { rel: 'sitemap', type: 'application/xml', href: 'https://localhost/sitemap.xml' }
+        ],
+    })
 </script>
 
 <style>
