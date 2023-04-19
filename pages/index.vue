@@ -1,21 +1,21 @@
 <template>
 
     <!-- ==================================== БАННЕР ЗАГОЛОВОК ==================================== -->
-    <header style="min-height: 100vh; background-color: var(--light); display: flex; justify-content: center; align-items: center; position: relative;">
+    <header style="min-height: 100vh; background-color: var(--light); display: flex; justify-content: center; align-items: center; position: relative;" >
 
         <!-- Кнопка меню личного кабинета -->
         <LkButton/>
         
-        <div style="z-index: 999998; margin-right: 10rem;">
+        <div style="z-index: 999998; margin-right: 10rem;" class="element1">
             
             <!-- Заголовок -->
-            <div style="display: flex; flex-direction: column; position: relative;">
+            <div style="display: flex; flex-direction: column; position: relative;" >
                 <h1 style="font-family: 'TildaSansWebBlack'">Юнидрам</h1>
                 <p style="position: absolute; top: 10rem; right: 0;">Глеба Рудакова ©</p>
-                <h2 style="margin-left: 0.5rem; margin-top: 0.8rem; color: gray; font-size: 2rem;">Гармоничный круг с ярким голосом</h2>
+                <h2 style="margin-left: 0.5rem; margin-top: 0.8rem; color: gray; font-size: 1.5rem;">Гармоничный круг с ярким голосом</h2>
             </div>
             
-            <div style="margin: 7rem 0 0 0.6rem;">
+            <div style="margin: 7rem 0 0 0.6rem;"  >
                 <NuxtLink :to="{ path: '/', hash: '#products' }" style="margin-right: 2rem; color: var(--dark);background-color: rgba(255, 255, 255, 0.5); padding: 1rem 2.5rem; border-radius: 1.5rem;">Купить</NuxtLink>
                 <NuxtLink :to="{ path: '/', hash: '#about-the-tool' }" style="margin-right: 2rem; color: var(--dark)">Об инструменте</NuxtLink>
             </div>
@@ -174,5 +174,31 @@
         opacity: 1;
         visibility: visible;
         left: calc(2%);
+    }
+
+    .element1 {
+    position: relative;
+    overflow: hidden;
+    }
+
+    .element1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+    left: -10px;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(253, 0, 0, 0.5);
+    animation: shadow-move 2s infinite linear;
+    }
+
+    @keyframes shadow-move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
     }
 </style>
