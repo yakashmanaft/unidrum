@@ -155,7 +155,6 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
     /* КНОПКА НАВЕРХ */
     #toTop {
         position: fixed;
@@ -222,46 +221,4 @@
         transform: translateX(-100%);
     }
     }
-=======
-  /* КНОПКА НАВЕРХ */
-  #toTop {
-      position: fixed;
-      display: inline-block;
-      bottom: 30px;
-      left: -40px;
-      width: 40px;
-      height: 40px;
-      z-index: 1000;
-      cursor: pointer;
-      text-align: center;
-      color: #fff;
-      border-radius: 4px;
-      background: var(--dark);
-      box-shadow: 0 0 0 3px rgba(0,0,0,.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: all .3s ease-in-out;
-      z-index: 999999;
-  }
-  #toTop:hover {
-          background: var(--more-dark);
-  }
-  #toTop svg {
-      position: relative;
-      top: 12px;
-      left: 1px;
-      fill: #fff;
-      transition: all .3s ease-in-out;
-  }
-  #toTop:hover svg {
-      cursor: pointer;
-      fill: #fff;
-      transition: all .3s ease-in-out;
-  }
-  #toTop.show {
-      opacity: 1;
-      visibility: visible;
-      left: calc(2%);
-  }
->>>>>>> 3dd5a0a71321da42e47a55ea114a936f3ad01490
 </style>
