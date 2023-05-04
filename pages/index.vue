@@ -16,8 +16,14 @@
           </div>
           
           <div style="margin: 7rem 0 0 0.6rem;">
-              <NuxtLink :to="{ path: '/', hash: '#products' }" style="margin-right: 2rem; color: var(--dark);background-color: rgba(255, 255, 255, 0.5); padding: 1rem 2.5rem; border-radius: 1.5rem;">Купить</NuxtLink>
-              <NuxtLink :to="{ path: '/', hash: '#about-the-tool' }" style="margin-right: 2rem; color: var(--dark)">Об инструменте</NuxtLink>
+              <NuxtLink 
+                :to="{ path: '/', hash: '#products' }" 
+                class="btn btn_buy"
+                >Купить</NuxtLink>
+              <NuxtLink 
+                :to="{ path: '/', hash: '#about-the-tool' }" 
+                class="btn btn_other"
+                >Об инструменте</NuxtLink>
           </div>
           
       </div>
@@ -196,5 +202,31 @@
     to {
         transform: translateX(-100%);
     }
+    }
+
+    .btn {
+        color: var(--dark);
+        padding: 1rem 2.5rem; 
+        border-radius: 1.5rem;
+        transition: 0.5s background-color, 0.5s color;
+    }
+
+    .btn:first-child{
+        margin-right: 2rem
+    }
+
+    .btn:hover {
+        background-color: var(--dark);
+        color: white;
+        transition: 0.5s background-color, 0.5s color;
+    }
+
+    .btn_buy {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn_buy:hover {
+        background-color: var(--dark);
+        color: white;
     }
 </style>

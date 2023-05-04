@@ -26,7 +26,6 @@ export default defineNuxtConfig({
                 ]
             },
         ],
-        
     ],
     // https://vite-pwa-org.netlify.app
     pwa: {
