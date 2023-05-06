@@ -20,10 +20,26 @@
                 :to="{ path: '/', hash: '#products' }" 
                 class="btn btn_buy"
                 >Купить</NuxtLink>
-              <NuxtLink 
+              <!-- <NuxtLink 
                 :to="{ path: '/', hash: '#about-the-tool' }" 
                 class="btn btn_other"
-                >Об инструменте</NuxtLink>
+                >История</NuxtLink>
+                <NuxtLink 
+                :to="{ path: '/', hash: '#about-the-tool' }" 
+                class="btn btn_other"
+                >Как хочешь</NuxtLink> -->
+
+                <NuxtLink 
+                :to="{ path: '/', hash: '#about-the-tool' }" 
+                class="btn_other_2"
+                >История</NuxtLink>
+                <NuxtLink />
+
+                <NuxtLink 
+                :to="{ path: '/', hash: '#about-the-tool' }" 
+                class="btn_other_2"
+                >Как хочешь</NuxtLink>
+                <NuxtLink />
           </div>
           
       </div>
@@ -209,10 +225,11 @@
         padding: 1rem 2.5rem; 
         border-radius: 1.5rem;
         transition: 0.5s background-color, 0.5s color;
+        margin-right: 2rem;
     }
 
-    .btn:first-child{
-        margin-right: 2rem
+    .btn:last-child{
+        margin-right: 0;
     }
 
     .btn:hover {
@@ -229,4 +246,14 @@
         background-color: var(--dark);
         color: white;
     }
+
+    .btn_other_2 {
+        color: var(--dark);
+        margin-right: 2rem;
+    }
+
+    .btn_other_2:hover {
+        text-decoration: underline;
+    }
+
 </style>

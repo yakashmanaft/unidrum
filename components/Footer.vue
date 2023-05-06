@@ -1,8 +1,9 @@
 <template>
-    <footer style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: var(--dark);">
+    <footer style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: var(--light);">
         <NuxtLink to="/" class="mr-4">Контакты</NuxtLink>
-        <NuxtLink to="/" class="mr-4">Политика конфиденциальности</NuxtLink>
-        <NuxtLink to="/" class="mr-4">Пользовательское соглашение</NuxtLink>
+        <NuxtLink to="/" class="mr-4">Политика и соглашения</NuxtLink>
+        <!-- <NuxtLink to="/" class="mr-4">Политика конфиденциальности</NuxtLink> -->
+        <!-- <NuxtLink to="/" class="mr-4">Пользовательское соглашение</NuxtLink> -->
         <NuxtLink to="/">Карта сайта</NuxtLink>
     </footer>
 </template>
@@ -15,7 +16,7 @@
 
 <style scoped>
     a {
-        color: var(--light);
+        color: var(--dark);
         margin-right: 2rem;
     }
 

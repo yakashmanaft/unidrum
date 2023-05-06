@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import LkButton from '../components/LkButton.vue'
+    // import LkButton from '../components/LkButton.vue'
 
     export default {
         
