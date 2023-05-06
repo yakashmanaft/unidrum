@@ -79,6 +79,10 @@
         padding-bottom: 1rem;
     }
 
+    .cart:hover {
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.4);
+    }
+
     .cart_img {
         width: 100%; 
         height: 300px;

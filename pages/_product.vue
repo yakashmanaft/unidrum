@@ -1,9 +1,10 @@
 <template>
     <!-- <h1>{{ product }}</h1> -->
-    <div>
+    <div style="position: relative;">
       <NuxtLink :to="{ path: '/', hash: '#products' }">На главную</NuxtLink>
-      <div>123 {{ route.params.id }}</div>
+      <div>{{ route.params.id }}</div>
     </div>
+
   </template>
 
 <script setup>
