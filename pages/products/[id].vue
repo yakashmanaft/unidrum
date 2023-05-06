@@ -21,14 +21,14 @@
         <p>2 500 <span v-if="currency === 'rub'">₽</span></p>
       </div>
   </div>
-
   <!--  -->
-  <div style="position: fixed; bottom: 2rem; right: 2rem;">
+  <div style="position: fixed; bottom: 2rem; right: 2rem; background-color: red">
     <div>
       <p>Обшая сумма: </p>
       <p style="font-weight: bold">37 500 <span v-if="currency === 'rub'">₽</span></p>
     </div>
   </div>
+
 </template>
 
 <script setup>

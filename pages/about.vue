@@ -9,7 +9,7 @@
         <Navigation/>
     </header>
 
-    <body style="padding-top: 10rem;">
+    <body style="padding-top: 10rem;" class="lk-wrapper">
         <ul>
             <li>История</li>
             <li>Исследование</li>
@@ -38,5 +38,8 @@
 </script>
 
 <style scoped>
-
+    .lk-wrapper {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
 </style>
