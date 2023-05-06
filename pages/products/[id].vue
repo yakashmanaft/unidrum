@@ -1,7 +1,7 @@
 <template>
   <!--  -->
   <div style="position: relative;">
-    <NuxtLink to="/">Назад</NuxtLink>
+    <NuxtLink :to="{ path: '/', hash: '#products' }">Назад</NuxtLink>
       <p>{{ $route.params}}</p>
       <!-- <div>123 {{ route.params.id }}</div> -->
       <p>{{ product }}</p>
