@@ -53,11 +53,11 @@
 
 
   <main>
+      <!-- ТОВАРЫ -->
+      <ProductsSection id="products"/>
       <!-- ОБ ИНСТРУМЕНТЕ -->
       <AboutSection id="about-the-tool"/>
 
-      <!-- ТОВАРЫ -->
-      <ProductsSection id="products"/>
   </main>
 
   <!-- ПОДВАЛ -->
