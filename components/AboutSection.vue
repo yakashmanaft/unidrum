@@ -7,11 +7,11 @@
                 
                 <!--  -->
                 <div>
-                    <h2>Об инструменте</h2>
-                    <p style="margin-top: 1rem;">UNIDRUM уникальный стальной Идиофон , объединяет в себе гармоничный  круг с чистым ярким характерным звуком</p>
+                    <h2 style="color: var(--dark)">Об инструменте</h2>
+                    <p style="margin-top: 1rem; color: gray;">UNIDRUM уникальный стальной Идиофон , объединяет в себе гармоничный  круг с чистым ярким характерным звуком</p>
         
                     <div style="margin-top: 2rem;">
-                        <NuxtLink to="/aboutPage">Подробнее</NuxtLink>
+                        <NuxtLink to="/about">Подробнее</NuxtLink>
                     </div>
                 </div>
                 
@@ -22,29 +22,24 @@
     
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 7rem; max-width:1200px;">
     
-                <NuxtLink class="history_steps" to="/aboutPage">
-                    <div class="step_line"></div>
-                    <div>
-                        <h2 style="font-size: 1.5rem;">Не поиск звука</h2>
-                    <p>Как я искал и возможность выбора нот</p>
+                <!-- <div v-for="(step, i) in steps" :key="i">
+                    {{ step }}
+                </div> -->
+
+                <NuxtLink class="history_steps" :to="`${step.linkTo}`" v-for="(step, i) in steps" :key="i">
+
+                    <!-- <div class="step_line"></div> -->
+
+                    <div style="display: flex;">
+                        <Icon :name="`${step.icon}`" class="step_icon"/>
+                        <div style="margin-left: 2rem;">
+                            <h2 style="font-size: 1.5rem; color: var(--dark)">{{ step.title }}</h2>
+                            <p style="color: gray">{{ step.text }}</p>
+                        </div>
                     </div>
+
                 </NuxtLink>
-    
-                <NuxtLink class="history_steps" to="/aboutPage">
-                    <div class="step_line"></div>
-                    <div>
-                        <h2 style="font-size: 1.5rem;">Исследование</h2>
-                    <p>Поиск чистого и уникального звучания</p>
-                    </div>
-                </NuxtLink>
-    
-                <NuxtLink class="history_steps" to="/aboutPage">
-                    <div class="step_line"></div>
-                    <div>
-                        <h2 style="font-size: 1.5rem;">Ручная работа</h2>
-                    <p>В начале была тишина. Белый шум...</p>
-                    </div>
-                </NuxtLink>
+
             </div>
 
         </div>
@@ -52,10 +47,29 @@
     </div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+    const steps = [
+        {
+            title: 'Не поиск звука',
+            text: 'Как я искал и возможность выбора нот',
+            linkTo: 'about',
+            icon: 'solar:headphones-round-sound-bold'
+
+        },
+        {
+            title: 'Исследование',
+            text: 'Поиск чистого и уникального звучания',
+            linkTo: 'about',
+            icon: 'game-icons:archive-research'
+        },
+        {
+            title: 'Ручная работа',
+            text: 'В начале была тишина. Белый шум...',
+            linkTo: 'about',
+            icon: 'material-symbols:back-hand'
+        }
+    ]
+
 </script>
 
 <style scoped>
@@ -74,6 +88,13 @@
     .history_steps {
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem;
+    }
+
+    .history_steps:hover {
+        text-decoration: none;
+        border-bottom: 1px solid gray;
     }
 
     .step_line {
@@ -81,5 +102,9 @@
         height: 2rem;
         background-color: var(--dark); 
         margin-right: 2rem;
+    }
+
+    .step_icon {
+        color: var(--dark);
     }
 </style>

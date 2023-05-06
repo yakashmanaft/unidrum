@@ -3,8 +3,8 @@
   <!-- ==================================== БАННЕР ЗАГОЛОВОК ==================================== -->
   <header style="min-height: 100vh; background-color: var(--light); display: flex; justify-content: center; align-items: center; position: relative;">
 
-      <!-- Кнопка меню личного кабинета -->
-      <LkButton/>
+        <!-- Блок навигации -->
+        <Navigation/>
       
       <div style="z-index: 999998; margin-right: 10rem;">
           
@@ -35,8 +35,9 @@
                 >История</NuxtLink>
                 <NuxtLink />
 
+                <!-- :to="{ path: '/', hash: '#about-the-tool' }"  -->
                 <NuxtLink 
-                :to="{ path: '/', hash: '#about-the-tool' }" 
+                :to="{ path: '/create' }"
                 class="btn_other_2"
                 >Как хочешь</NuxtLink>
                 <NuxtLink />

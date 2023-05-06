@@ -81,6 +81,8 @@
 
     .cart:hover {
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.4);
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.4);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.4);
     }
 
     .cart_img {

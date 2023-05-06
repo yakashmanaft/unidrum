@@ -1,11 +1,15 @@
 <template>
     <header>
-        ABOUT PAGE
+        <!-- ABOUT PAGE -->
         <!--  -->
-        <NuxtLink :to="{ path: '/', hash: '#about-the-tool' }">Назад</NuxtLink>
+        <!-- <NuxtLink :to="{ path: '/', hash: '#about-the-tool' }">Назад</NuxtLink> -->
+
+        <!--  -->
+
+        <Navigation/>
     </header>
 
-    <div>
+    <body style="padding-top: 10rem;">
         <ul>
             <li>История</li>
             <li>Исследование</li>
@@ -24,12 +28,12 @@
         <div style="display: flex; justify-content: center; align-items: center; background-color: blue;">
             <img src="/img/founder.jpg" alt="Ханг идиофон UNIDRUM-1.3-Minor" style="height: 100%; object-fit: cover;">
         </div>
-    </div>
+    </body>
 </template>
 
 <script>
     export default {
-        name: 'aboutPage'
+        name: 'about'
     }
 </script>
 
