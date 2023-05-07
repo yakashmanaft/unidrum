@@ -5,9 +5,9 @@
     <Navigation/>
   </header>
 
-  <body style="padding-top: 10rem;" class="lk-wrapper">
+  <main style="padding-top: 10rem;" class="lk-wrapper">
     <h2 style="color: var(--dark)">Созданный для вас</h2>
-  </body>
+  </main>
 </template>
 
 <script>

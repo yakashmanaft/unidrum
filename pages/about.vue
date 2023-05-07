@@ -9,7 +9,7 @@
         <Navigation/>
     </header>
 
-    <body style="padding-top: 10rem;" class="lk-wrapper">
+    <main style="padding-top: 10rem;" class="lk-wrapper">
         <ul>
             <li>История</li>
             <li>Исследование</li>
@@ -28,7 +28,7 @@
         <div style="display: flex; justify-content: center; align-items: center; background-color: blue;">
             <img src="/img/founder.jpg" alt="Ханг идиофон UNIDRUM-1.3-Minor" style="height: 100%; object-fit: cover;">
         </div>
-    </body>
+    </main>
 </template>
 
 <script>
