@@ -7,7 +7,7 @@
   <!--  -->
   <main>
     
-    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding-top: 10rem;">
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding-top: 8rem;">
         <!-- <p>{{ $route.params}}</p> -->
         <h2>{{ product.model }}</h2>
         <p>{{ product }}</p>

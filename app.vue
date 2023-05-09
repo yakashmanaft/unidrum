@@ -13,7 +13,11 @@
   </div> -->
   <NuxtLayout>
     <!-- <NuxtLoadingIndicator/> -->
-    <NuxtPage/>
+    <div style="      position: relative;
+      overflow: hidden;">
+      
+      <NuxtPage/>
+    </div>
 
     <!--  -->
     <!-- <div id='nav'>

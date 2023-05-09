@@ -5,7 +5,7 @@
             
             <!-- Изображение товара -->
             <div class="cart_img">
-                <img src="/img/UNIDRUM-1.3-Minor.jpg" alt="Ханг идиофон UNIDRUM-1.3-Minor">
+                <img src="/img/UNIDRUM-1.3-Minor.png" alt="Ханг идиофон UNIDRUM-1.3-Minor">
             </div>
 
             <!--  -->
@@ -17,7 +17,8 @@
                 <!-- Текст -->
                 <div style="margin-top: 1rem;">
                     <p>Кол-во нот: {{ product.numberОfNotes }}</p>
-                    <p>Ноты: {{ product.notes }}</p>
+                    <p style="margin-top: 1rem;">Ноты: </p>
+                    <p>{{ notesArrayToString(product.notes) }}</p>
                 </div>
                 
                 <!-- <NuxtLink :to="{ name: '_product', params: product }">Подробнее</NuxtLink> -->
@@ -55,6 +56,10 @@
     const currency = computed(() => {
         return productsStore.currency
     })
+
+    const notesArrayToString = (notes) => {
+        return notes.join(', ')
+    }
     
 </script>
 
@@ -70,6 +75,7 @@
         padding: 3rem 5rem;
     }
     .cart {
+        flex: 1;
         background-color: white;
         -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);

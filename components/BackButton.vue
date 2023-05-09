@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink v-if="$route.name != 'lk' && $route.name != 'create' && $route.name != 'about'" :to="backPath($route.name)" style="display: flex; align-items: center; justify-content: flex-end; border-radius: 1.5rem;  backdrop-filter: blur(2px);" class="back-btn">
+  <NuxtLink v-if="$route.name != 'lk' && $route.name != 'create' && $route.name != 'sitemap' && $route.name != 'policy'" :to="backPath($route.name)" style="display: flex; align-items: center; justify-content: flex-end; border-radius: 1.5rem;  backdrop-filter: blur(2px);" class="back-btn">
 
       <!-- Иконка -->
       <!-- <div style="width: 48px; height: 48px; background-color: gray;border-radius: 100%; display: flex; justify-content: center; align-items: center;">
@@ -14,7 +14,7 @@
   </NuxtLink>
 
   <div v-else>
-    <NuxtLink v-if="$route.name != 'products-id'" to="/">
+    <NuxtLink v-if="$route.name != 'products-id' && $route.name != 'about'" to="/">
       <div>На главную</div>
     </NuxtLink>
   </div>

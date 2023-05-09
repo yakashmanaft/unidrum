@@ -16,7 +16,9 @@
                 </div>
                 
                 <!--  -->
-                <video :src="'/video/K00A2790.MOV'" type="video/mov" width="640" height="360" preload controls></video>
+                <div style=" border-radius: 1rem; width: 100%; height: 380px;  overflow: hidden;">
+                    <video style="width: 100%; height: 100%;" :src="'/video/K00A2790.MOV'" type="video/mov" width="640" height="360" preload controls></video>
+                </div>
         
             </div>
     
@@ -26,15 +28,15 @@
                     {{ step }}
                 </div> -->
 
-                <NuxtLink class="history_steps" :to="`${step.linkTo}`" v-for="(step, i) in steps" :key="i">
+                <NuxtLink class="history_steps" :to="linkTo(`${step.hashString}`)" v-for="(step, i) in steps" :key="i">
 
                     <!-- <div class="step_line"></div> -->
 
                     <div style="display: flex;">
                         <Icon :name="`${step.icon}`" class="step_icon"/>
-                        <div style="margin-left: 2rem;">
-                            <h2 style="font-size: 1.5rem; color: var(--dark)">{{ step.title }}</h2>
-                            <p style="color: gray">{{ step.text }}</p>
+                        <div style="margin-left: 2rem; padding-right: 1rem; ">
+                            <h2 style="font-size: 1.5rem; color: var(--dark);">{{ step.title }}</h2>
+                            <p style="color: gray; margin-top: 0.5rem">{{ step.text }}</p>
                         </div>
                     </div>
 
@@ -50,25 +52,34 @@
 <script setup>
     const steps = [
         {
-            title: 'Не поиск звука',
-            text: 'Как я искал и возможность выбора нот',
-            linkTo: 'about',
+            title: 'Первая нота',
+            text: 'Как я искал звучание',
+            hashString: 'history',
             icon: 'solar:headphones-round-sound-bold'
 
         },
         {
             title: 'Исследование',
             text: 'Поиск чистого и уникального звучания',
-            linkTo: 'about',
+            hashString: 'history',
             icon: 'game-icons:archive-research'
         },
         {
             title: 'Ручная работа',
             text: 'В начале была тишина. Белый шум...',
-            linkTo: 'about',
+            hashString: 'history',
             icon: 'material-symbols:back-hand'
         }
     ]
+
+    const linkTo = (hashString) => {
+        if (hashString === 'history') {
+            return {
+                path: '/about',
+                hash: '#history'
+            }
+        }
+    }
 
 </script>
 

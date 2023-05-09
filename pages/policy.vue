@@ -6,13 +6,13 @@
   </header>
 
   <main style="padding-top: 8rem;" class="wrapper">
-    <h2 style="color: gray">Созданный для вас</h2>
+    <h2 style="color: var(--dark)">Правила и политика конфиденциальности</h2>
   </main>
 </template>
 
 <script>
   export default {
-      name: 'create'
+      name: 'policy'
   }
 </script>
 

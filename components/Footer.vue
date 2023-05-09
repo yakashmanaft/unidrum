@@ -1,10 +1,10 @@
 <template>
     <footer style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: var(--light);">
         <NuxtLink to="/" class="mr-4">Контакты</NuxtLink>
-        <NuxtLink to="/" class="mr-4">Политика и соглашения</NuxtLink>
+        <NuxtLink to="/policy" class="mr-4">Политика и соглашения</NuxtLink>
         <!-- <NuxtLink to="/" class="mr-4">Политика конфиденциальности</NuxtLink> -->
         <!-- <NuxtLink to="/" class="mr-4">Пользовательское соглашение</NuxtLink> -->
-        <NuxtLink to="/">Карта сайта</NuxtLink>
+        <NuxtLink to="/sitemap">Карта сайта</NuxtLink>
     </footer>
 </template>
 

@@ -20,7 +20,12 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    color: gray;
+    color: var(--dark);
+}
+
+p {
+    color:gray;
+    line-height: 1.6;
 }
 
 
