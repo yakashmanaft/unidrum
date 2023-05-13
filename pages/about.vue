@@ -29,7 +29,7 @@
         </ul>
 
         <!-- #HISTORY -->
-        <div id="history" style="padding-top: 6rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
+        <div id="history" style="padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
 
             <!--  -->
             <div style="flex: 1; height: 360px; overflow: hidden; border-radius: 1rem; background-color: red;">

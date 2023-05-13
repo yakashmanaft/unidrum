@@ -17,7 +17,8 @@ export const useProductsStore = definePiniaStore(
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
             ],
-            currentPrice: 15700,
+            oldPrice: '',
+            currentPrice: 'Под заказ',
           },
           {
             id: 2,
@@ -28,7 +29,9 @@ export const useProductsStore = definePiniaStore(
             features: 'С штампами',
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
-            ]
+            ],
+            oldPrice: '57 000',
+            currentPrice: '50 000',
           },
           {
             id: 3,
@@ -39,7 +42,9 @@ export const useProductsStore = definePiniaStore(
             features: 'С штампами',
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
-            ]
+            ],
+            oldPrice: '57 000',
+            currentPrice: '50 000',
           },
           // {
           //   id: 4,

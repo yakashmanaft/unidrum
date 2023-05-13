@@ -29,8 +29,8 @@
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <!-- <NuxtLink :to="{ path: `/products/${product.route}`}">Подробнее</NuxtLink> -->
                     <div>
-                        <p style="text-decoration:line-through; color: gray;">45 000 <span v-if="currency === 'rub'">₽</span></p>
-                        <p style="font-weight: bold">37 500 <span v-if="currency === 'rub'">₽</span></p>
+                        <p style="text-decoration:line-through; color: gray;">{{ product.oldPrice }}<span v-if="currency === 'rub'">₽</span></p>
+                        <p style="font-weight: bold">{{ product.currentPrice }}</p>
                     </div>
                 </div>
     
