@@ -12,12 +12,61 @@
         position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        padding-top: 8rem;
+        padding-top: 8rem
       "
     >
       <!-- <p>{{ $route.params}}</p> -->
-      <h2>{{ product.model }}</h2>
-      <p>{{ product }}</p>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <h2>{{ product.model }}</h2>
+
+        <p style="font-size: 1.5rem;">Ноты: {{ product.notes }}</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; height: 100vh;">
+
+        <!--  -->
+        <div style="flex: 1;">
+          <img src="/img/UNIDRUM-1.3-Minor.png" alt="">
+        </div>
+
+        <!--  -->
+        <div style="flex: 1; background-color: gray; display: flex; flex-direction: column;">
+          <!-- <div>
+            Ноты
+            C3 E3 G3 B3 C4 D4 F#4 G4 B4
+          </div> -->
+          <div>
+            Тональность
+            C
+          </div>
+          <div>
+            Вес
+            5.9 кг
+          </div>
+          <div>
+            Размеры
+            51 см
+            Высота
+            17 см
+          </div>
+          <!-- <div>
+            Покрытие
+            Краска
+          </div> -->
+          <div>
+            Цвет
+            Стальной с зелено-голубым отливом
+          </div>
+          <div>
+            В наличии
+          </div>
+          <p style="color: var(--dark)">{{ product }}</p>
+          <br>
+        </div>
+
+      </div>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
         corrupti asperiores nihil laboriosam ipsa eligendi dolorempedit, vitae
@@ -171,7 +220,9 @@
           {{ item.productQty }} шт. <span style="color: gray">-{{ item.dilerDiscount }}%</span>
         </div> 
         <!--  -->
-        <div>Цена: {{ productPrice(product.currentPrice, item.dilerDiscount, item.productQty) }}</div>
+        <div>
+          {{ productPrice(product.currentPrice, item.dilerDiscount, item.productQty) }}
+        </div>
       </div>
     </div>
 
@@ -188,7 +239,7 @@
 
     <!--Общая сумма заказа  -->
     <div
-      style="position: fixed; bottom: 2rem; right: 2rem; background-color: red;"
+      style="position: fixed; top: 0; right: 2rem; background-color: red; z-index: 999999"
     >
       <div>
         <p>Обшая сумма:</p>
@@ -241,6 +292,10 @@ useHead({
 
 // 
  const dilerOffer = [
+   {
+     productQty: 2,
+     dilerDiscount: 30    
+  },
   {
     productQty: 3,
     dilerDiscount: 20
@@ -248,7 +303,11 @@ useHead({
   {
     productQty: 5,
     dilerDiscount: 30 
-  }
+  },
+  {
+    productQty: 10,
+    dilerDiscount: 40
+  },
  ]
 
  //
@@ -257,7 +316,7 @@ useHead({
   if(productCurrentPrice === 'Под заказ') {
     return product.currentPrice
   } else {
-    return `Цена розница: ${product.currentPrice} Экономия: ${discountInCurrency}, Цена за 1шт: ${product.currentPrice - (product.currentPrice / 100 * dilerDiscount)}, Итого: ${productQty * (product.currentPrice - discountInCurrency)}`
+    return `Цена розница: ${product.currentPrice} Цена дилера: ${product.currentPrice - discountInCurrency} Экономия: ${discountInCurrency}, Цена за 1шт: ${product.currentPrice - (product.currentPrice / 100 * dilerDiscount)}, Итого: ${productQty * (product.currentPrice - discountInCurrency)}`
   }
  }
 </script>

@@ -75,6 +75,10 @@
   <main>
     <!-- ТОВАРЫ -->
     <ProductsSection id="products" />
+
+    <!-- ТОВАРЫ 1 -->
+    <ProductsSectio id="products" />
+
     <!-- ОБ ИНСТРУМЕНТЕ -->
     <AboutSection id="about-the-tool" />
   </main>

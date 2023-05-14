@@ -3,10 +3,6 @@
         <NuxtLink :to="{ path: `/products/${product.route}`}" v-for="(product, index) in products" :key="index" class="cart">
             
             
-
-
-
-
             <!-- Изображение товара -->
             <div class="cart_img">
                 <img src="/img/UNIDRUM-1.3-Minor.png" alt="Ханг идиофон UNIDRUM-1.3-Minor">
@@ -41,16 +37,6 @@
                 <!-- <div @click="$router.push(`/products/${product.route}`)">Подробнее</div> -->
             </div>
 
-            <!--  -->
-            <div class="sale-label">
-                <div style="font-size: 2rem;">
-                    sale                    
-                </div>
-                <div>
-                    -20%
-                </div>
-            </div>
-
         </NuxtLink>
 
             
@@ -82,26 +68,21 @@
         min-height: 100vh; 
         background-color: var(--light); 
         display: flex; 
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 3rem;
-        padding: 3rem 2rem;;
-        /* overflow: scoll; */
+        gap: 5rem;
+        padding: 3rem 5rem;
     }
     .cart {
-        position: relative;
-        /* flex: 1; */
-        display: inline;
-        width: 700px;
+        flex: 1;
         background-color: white;
         -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
         border-radius: 2rem;
-        /* max-width: 350px; */
-        /* padding-bottom: 1rem; */
-        /* flex-wrap: no-wrap; */
+        max-width: 350px;
+        padding-bottom: 1rem;
     }
 
     .cart:hover {
@@ -126,22 +107,6 @@
         object-fit: cover;
         border-radius: 2rem 2rem 0 0;
     } 
-
-    .cart .sale-label {
-        position: absolute;
-        width: 7rem; 
-        height: 7rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--dark);
-        color: white;
-        border-radius: 3rem 0 2rem 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-    }
 
     a:visited {
         color: inherit;

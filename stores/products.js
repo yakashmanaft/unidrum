@@ -9,8 +9,8 @@ export const useProductsStore = definePiniaStore(
         products: [
           {
             id: 1,
-            route: 'UNIDRUM-1.3-Minor',
-            model: 'UNIDRUM 1.3 Minor',
+            route: 'UNI-1.3-Minor',
+            model: 'UNI 1.3 Minor',
             numberОfNotes: 9,
             notes: ['D3', 'F3', 'A3', 'C4', 'D4', 'E4', 'F4', 'G4', 'A4'],
             features: 'Без штампов',
@@ -22,29 +22,29 @@ export const useProductsStore = definePiniaStore(
           },
           {
             id: 2,
-            route: 'UNIDRUM-2-Major',
-            model: 'UNIDRUM 2 Major',
+            route: 'UNI-2-Major',
+            model: 'UNI 2 Major',
             numberОfNotes: 9,
             notes: ['D3', 'G3', 'A3', 'B3', 'C#4', 'D4', 'E4', 'F#4', 'A4'],
             features: 'С штампами',
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
             ],
-            oldPrice: 57000,
-            currentPrice: 50000,
+            oldPrice: 47000,
+            currentPrice: 47000,
           },
           {
             id: 3,
-            route: 'UNIDRUM-2-Minor',
-            model: 'UNIDRUM 2 Minor',
+            route: 'UNI-2-Minor',
+            model: 'UNI 2 Minor',
             numberОfNotes: 9,
             notes: ['D3', 'F3', 'A3', 'C4', 'D4', 'E4', 'F4', 'G4', 'A4'],
             features: 'С штампами',
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
             ],
-            oldPrice: 57000,
-            currentPrice: 49000,
+            oldPrice: 47000,
+            currentPrice: 47000,
           },
           // {
           //   id: 4,
