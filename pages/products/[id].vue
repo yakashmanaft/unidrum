@@ -253,10 +253,11 @@ useHead({
 
  //
  const productPrice = (productCurrentPrice, dilerDiscount, productQty) => {
+  let discountInCurrency = product.currentPrice / 100 * dilerDiscount
   if(productCurrentPrice === 'Под заказ') {
     return product.currentPrice
   } else {
-    return `Цена розница: ${product.currentPrice} Экономия: ${product.currentPrice / 100 * dilerDiscount}, Цена за 1шт: ${product.currentPrice - (product.currentPrice / 100 * dilerDiscount)}, Итого: ${productQty * (product.currentPrice - (product.currentPrice / 100 * dilerDiscount))}`
+    return `Цена розница: ${product.currentPrice} Экономия: ${discountInCurrency}, Цена за 1шт: ${product.currentPrice - (product.currentPrice / 100 * dilerDiscount)}, Итого: ${productQty * (product.currentPrice - discountInCurrency)}`
   }
  }
 </script>
