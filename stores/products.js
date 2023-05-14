@@ -30,8 +30,8 @@ export const useProductsStore = definePiniaStore(
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
             ],
-            oldPrice: '57 000',
-            currentPrice: '50 000',
+            oldPrice: 57000,
+            currentPrice: 50000,
           },
           {
             id: 3,
@@ -43,8 +43,8 @@ export const useProductsStore = definePiniaStore(
             imgs: [
               '/img/UNIDRUM-1.3-Minor.jpg'
             ],
-            oldPrice: '57 000',
-            currentPrice: '50 000',
+            oldPrice: 57000,
+            currentPrice: 49000,
           },
           // {
           //   id: 4,

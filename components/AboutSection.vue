@@ -7,8 +7,8 @@
                 
                 <!--  -->
                 <div>
-                    <h2 style="color: var(--dark)">Об инструменте</h2>
-                    <p style="margin-top: 1rem; color: gray;">UNIDRUM уникальный стальной Идиофон , объединяет в себе гармоничный  круг с чистым ярким характерным звуком</p>
+                    <h2 style="color: var(--dark)">UNI</h2>
+                    <p style="margin-top: 1rem; color: gray;">это уникальный стальной Идиофон , объединяет в себе гармоничный  круг с чистым ярким характерным звуком</p>
         
                     <div style="margin-top: 2rem;">
                         <NuxtLink to="/about">Подробнее</NuxtLink>
